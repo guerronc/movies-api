@@ -10,6 +10,8 @@ const { logErrors, errorHandler, wrapErrors } = require('./utils/middleware/erro
 
 const notFoundHandler = require('./utils/middleware/notFoundHandler');
 
+const debug = require('debug')('app:server')
+
 //Body parser
 app.use(express.json());
 
@@ -25,5 +27,5 @@ app.use(logErrors);
 app.use(wrapErrors);
 
 app.listen(config.port, function () {
-    console.log(`Listening http://localhost:${config.port}`);
+    debug(`Listening http://localhost:${config.port}`);
 });
