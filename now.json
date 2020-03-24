@@ -14,12 +14,12 @@
         }
     ],
     "env":{
-        "DB_USER":"@platzivideo-db-user",
-        "DB_PASSWORD": "@platzivideo-db-password",
-        "DB_HOST1": "@platzivideo-db-host1",
-        "DB_HOST2": "@platzivideo-db-host2",
-        "DB_HOST3": "@platzivideo-db-host3",
-        "DB_NAME": "@platzivideo-db-name",
-        "DB_PORT": "@platzivideo-db-port"
+        "DB_USER":"@db-user",
+        "DB_PASSWORD": "@db-password",
+        "DB_HOST1": "@db-host0",
+        "DB_HOST2": "@db-host1",
+        "DB_HOST3": "@db-host2",
+        "DB_NAME": "@db-name-movies",
+        "DB_PORT": "@db-port"
     }
 }
