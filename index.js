@@ -1,6 +1,7 @@
 const express = require('express');
-const app = express();
+const cors = require('cors');
 
+const app = express();
 
 const { config } = require('./config/index');
 
@@ -13,6 +14,7 @@ const notFoundHandler = require('./utils/middleware/notFoundHandler');
 const debug = require('debug')('app:server')
 
 //Body parser
+app.use(cors());
 app.use(express.json());
 
 //Routes
