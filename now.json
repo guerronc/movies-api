@@ -1,25 +1,30 @@
 {
-    "name": "platzivideo",
-    "version": 2,
-    "builds": [
-        {
-            "src": "index.js",
-            "use": "@now/node"
-        }
-    ],
-    "routes":[
-        {
-            "src": "(/(.*))",
-            "dest": "/index.js"
-        }
-    ],
-    "env":{
-        "DB_USER":"@db-user",
-        "DB_PASSWORD": "@db-password",
-        "DB_HOST1": "@db-host0",
-        "DB_HOST2": "@db-host1",
-        "DB_HOST3": "@db-host2",
-        "DB_NAME": "@db-name-movies",
-        "DB_PORT": "@db-port"
+  "name": "platzivideo",
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@now/node"
     }
+  ],
+  "routes": [
+    {
+      "src": "(/(.*))",
+      "dest": "/index.js"
+    }
+  ],
+  "env": {
+    "DB_USER": "@db-user",
+    "DB_PASSWORD": "@db-password",
+    "DB_HOST1": "@db-host0",
+    "DB_HOST2": "@db-host1",
+    "DB_HOST3": "@db-host2",
+    "DB_NAME": "@db-name-movies",
+    "DB_PORT": "@db-port",
+    "DEFAULT_ADMIN_PASSWORD": "@defaultAdminPassword",
+    "DEFAULT_USER_PASSWORD": "@defaultUserPassword",
+    "AUTH_JWT_SECRET": "@authJwtSecret",
+    "PUBLIC_API_KEY_TOKEN": "@publicApiKeyToken",
+    "ADMIN_API_KEY_TOKEN": "@adminApiKeyToken"
+  }
 }
