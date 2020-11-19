@@ -10,7 +10,8 @@
     "test": "snyk test && mocha --exit",
     "cover": "nyc npm run test",
     "report": "nyc report --reporter=html && start coverage/index.html",
-    "inspect": "set DEBUG=express:*,app:* && nodemon --inspect index"
+    "inspect": "set DEBUG=express:*,app:* && nodemon --inspect index",
+    "vercel-build": "node ./index.js"
   },
   "keywords": [],
   "author": "",
