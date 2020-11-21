@@ -1,5 +1,5 @@
 const express = require('express');
-const passport = require('passport')
+const passport = require('passport');
 
 const UserMoviesService = require('../services/userMovies');
 
@@ -63,7 +63,7 @@ const userMoviesApi = app => {
   router.delete(
     '/:userMovieId',
     passport.authenticate('jwt', { session: false }),
-    scopesValidationHandler(['read:delete-movies']),
+    scopesValidationHandler(['delete:user-movies']),
     validationHandler({ userMovieId: movieIdSchema }, 'params'),
     async (req, res, next) => {
       const { userMovieId } = req.params;
