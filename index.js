@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const helmet = require('helmet');
 
 const app = express();
 
@@ -20,9 +21,10 @@ const notFoundHandler = require('./utils/middleware/notFoundHandler');
 
 const debug = require('debug')('app:server');
 
-//Body parser
+//Middleware
 app.use(cors());
 app.use(express.json());
+app.use(helmet());
 
 //Routes
 authApi(app);
