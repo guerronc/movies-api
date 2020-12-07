@@ -26,7 +26,6 @@ function errorHandler(err, req, res, next) { //eslint-disable-line
     const {
         output: { statusCode, payload }
     } = err;
-
     res.status(statusCode);
     res.json(withErrorStack(payload, err.stack));
 }
